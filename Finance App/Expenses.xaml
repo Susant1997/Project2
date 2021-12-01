@@ -1,0 +1,66 @@
+﻿<Page
+    x:Class="Assignment2.Expenses"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Assignment2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" FontSize="25">
+    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" ZoomMode="Enabled">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Border Grid.ColumnSpan="3" Margin="0,0,-21,-43" Grid.RowSpan="12" >
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#7be9f6" Offset="0.0"/>
+                        <GradientStop Color="#f083da" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+
+            <TextBlock Style="{StaticResource HeaderTextBlockStyle}" HorizontalAlignment="Left" Height="75" Margin="34,0,0,0" Text="Expenses" TextWrapping="Wrap" VerticalAlignment="Center" Width="219" FontSize="36" FontWeight="Bold" Grid.Column="1"/>
+            <TextBlock Style="{StaticResource BaseTextBlockStyle}" HorizontalAlignment="Left" Margin="48,0,0,0" Grid.Row="2" Text="Do you own the home you live in?" TextWrapping="Wrap" VerticalAlignment="Center" Height="73" Width="562" FontSize="25"/>
+            <ComboBox x:Name="Option" SelectionChanged="MyComboBox_SelectionChanged" PlaceholderText="Select a Status" Width="274" Height="78" FontSize="25" Grid.Column="1" Grid.Row="2">
+                <x:String>Yes</x:String>
+                <x:String>NO</x:String>
+            </ComboBox>
+            <TextBlock Style="{StaticResource BodyTextBlockStyle}" x:Name="OptionResult" Grid.Column="2" HorizontalAlignment="Left" Margin="75,3,0,0" Grid.Row="2" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="65" Width="138" FontSize="25"/>
+            <TextBlock Style="{StaticResource BaseTextBlockStyle}" HorizontalAlignment="Left" Margin="48,0,0,25" Grid.Row="4" Text="Do you have any credit or store cards?" TextWrapping="Wrap" VerticalAlignment="Bottom" Height="76" RenderTransformOrigin="0.552,0.475" Width="576" FontSize="25"/>
+            <ComboBox x:Name="Option1" SelectionChanged="MyComboBox1_SelectionChanged" PlaceholderText="Select a Status" Width="274" Height="78" FontSize="25" Grid.Column="1" Grid.Row="4">
+                <x:String>Yes</x:String>
+                <x:String>No</x:String>
+            </ComboBox>
+            <TextBlock Style="{StaticResource BodyTextBlockStyle}" x:Name="Option1Result" Grid.Column="2" HorizontalAlignment="Left" Margin="75,0,0,0" Grid.Row="4" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="70" Width="134" FontSize="25"/>
+            <TextBlock Style="{StaticResource BaseTextBlockStyle}" HorizontalAlignment="Left" Margin="48,0,0,0" Grid.Row="6" Text="Do you have any other loans?" TextWrapping="Wrap" VerticalAlignment="Top" Height="66" Width="512" FontSize="25"/>
+            <ComboBox x:Name="Option2" SelectionChanged="MyComboBox2_SelectionChanged" PlaceholderText="Select a Status" Width="274" Height="78" FontSize="25" Grid.Column="1" Grid.Row="6">
+                <x:String>Yes</x:String>
+                <x:String>No</x:String>
+            </ComboBox>
+            <TextBlock Style="{StaticResource BodyTextBlockStyle}" x:Name="Option2Result" Grid.Column="2" HorizontalAlignment="Left" Margin="75,0,0,0" Grid.Row="6" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="63" Width="132" FontSize="25"/>
+            <TextBlock Style="{StaticResource BaseTextBlockStyle}" HorizontalAlignment="Left" Margin="48,10,0,0" Grid.Row="8" Text="Residential address" TextWrapping="Wrap" VerticalAlignment="Top" Height="75" Width="522" FontSize="25"/>
+
+            <Button Content="Next" Style="{StaticResource DarkStyle}" Background="Aqua" Margin="49,0,0,0" Grid.Row="10" VerticalAlignment="Top" Height="54" Width="162" FontSize="25" Click="Button_Click"/>
+            <TextBox Grid.Column="1" HorizontalAlignment="Left" Grid.Row="8" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Height="91" Width="795" Grid.ColumnSpan="2" FontSize="25"/>
+
+        </Grid>
+    </ScrollViewer>
+</Page>

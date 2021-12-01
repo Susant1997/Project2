@@ -1,0 +1,61 @@
+﻿<Page
+    x:Class="Assignment2.Identification"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Assignment2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" ZoomMode="Enabled">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="2*"/>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Border Grid.ColumnSpan="3" Margin="0,0,-20,-30" Grid.RowSpan="13">
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#7be9f6" Offset="0.0"/>
+                        <GradientStop Color="#f083da" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+            <TextBlock Style="{StaticResource HeaderTextBlockStyle}" HorizontalAlignment="Left" Margin="30,10,0,0" Text="Identification" TextWrapping="Wrap" VerticalAlignment="Top" Height="63" Width="256" Grid.Column="1" FontSize="36" FontWeight="Bold" SelectionChanged="TextBlock_SelectionChanged"/>
+            <TextBlock Style="{StaticResource BaseTextBlockStyle}" HorizontalAlignment="Left" Margin="182,0,0,0" Grid.Row="2" Text="NZ driver licence number" TextWrapping="Wrap" VerticalAlignment="Center" Height="59" Width="344" FontSize="25"/>
+            <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="30,15,0,0" Grid.Row="2" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="66" Width="376" FontSize="25"/>
+            <TextBlock Style="{StaticResource BaseTextBlockStyle}" HorizontalAlignment="Left" Margin="182,0,0,0" Grid.Row="4" Text="NZ driver licence version" TextWrapping="Wrap" VerticalAlignment="Center" Height="63" Width="341" FontSize="25"/>
+            <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="30,0,0,0" Grid.Row="4" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Height="66" Width="376" FontSize="25"/>
+            <TextBlock Style="{StaticResource BaseTextBlockStyle}" HorizontalAlignment="Left" Margin="182,0,0,0" Grid.Row="6" Text="Date of birth" TextWrapping="Wrap" VerticalAlignment="Center" Height="81" Width="330" FontSize="25"/>
+            <CalendarView Grid.Column="1" Grid.Row="6" Height="293" Width="440" Grid.RowSpan="2"/>
+            <TextBlock Style="{StaticResource BodyTextBlockStyle}" x:Name="CalendarResult" HorizontalAlignment="Center" Grid.Row="7" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="63" Width="322" FontSize="25" SelectionChanged="CalendarResult_SelectionChanged"/>
+            <TextBlock Style="{StaticResource BaseTextBlockStyle}" HorizontalAlignment="Left" Margin="182,27,0,0" Grid.Row="10" Text="Gender" TextWrapping="Wrap" VerticalAlignment="Top" Height="56" Width="344" FontSize="25"/>
+            <ComboBox x:Name="Option" SelectionChanged="MyComboBox_SelectionChanged" PlaceholderText="Select a Gender" Width="352" Height="76" FontSize="25" Margin="10,0,0,0" Grid.Row="10" VerticalAlignment="Center" Grid.Column="1" >
+                <x:String>Male</x:String>
+                <x:String>Female</x:String>
+                <x:String>Mention Not</x:String>
+            </ComboBox>
+            <TextBlock Style="{StaticResource BodyTextBlockStyle}" x:Name="GenderResult" Grid.Column="2" HorizontalAlignment="Left" Grid.Row="10" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="73" Width="234" FontSize="25" Margin="0,10,0,0"/>
+            <Button Content="Submit Application" Style="{StaticResource DarkStyle}" Background="Aqua" Margin="182,0,0,0" Grid.Row="12" VerticalAlignment="Top" Width="304" Height="49" FontSize="25" Click="Button_Click"/>
+
+
+        </Grid>
+    </ScrollViewer>
+</Page>
